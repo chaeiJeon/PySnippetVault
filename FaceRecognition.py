@@ -3,18 +3,6 @@ import numpy as np
 import face_recognition
 
 # 얼굴 인코딩
-image = face_recognition.load_image_file("C:\Git\python\FaceRecognition\jeonchaei.png")
-face_encoding = face_recognition.face_encodings(image)[0]
-
-known_face_encodings = [face_encoding
-]
-known_face_names = [
-    "WARNING"
-]
-print('Learned encoding for', len(known_face_encodings), 'images.')
-
-
-# WARNING 레이블이 붙은 얼굴 인코딩 불러오기
 known_face_encoding = face_recognition.face_encodings(face_recognition.load_image_file("C:\Git\python\FaceRecognition\jeonchaei.png"))[0]
 known_face_encodings = [known_face_encoding]
 known_face_names = ["WARNING"]
